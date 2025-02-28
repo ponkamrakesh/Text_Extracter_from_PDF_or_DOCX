@@ -16,40 +16,59 @@ This is a simple **FastAPI web application** that allows users to upload resumes
    ```bash
    git clone https://github.com/yourusername/resume-analyzer.git
    cd resume-analyzer
-Install dependencies
+   ```
 
-bash
+2. **Install dependencies**
+   ```bash
+   pip install fastapi uvicorn python-multipart pdfplumber python-docx jinja2
+   ```
 
-pip install fastapi uvicorn python-multipart pdfplumber python-docx jinja2
+3. **Run the FastAPI server**
+   ```bash
+   uvicorn main:app --reload
+   ```
 
+4. **Open in Browser**
+   ```
+   http://127.0.0.1:8000/
+   ```
 
-Run the FastAPI server
+---
 
-uvicorn main:app --reload
-
-Open in Browser  http://127.0.0.1:8000/
-
-📂 Project Structure
-
+## 📂 Project Structure
+```
 resume-analyzer/
 │── main.py              # FastAPI backend
 │── README.md            # Project documentation
 │── uploads/             # Stores uploaded resumes (auto-created)
+```
 
-🛠️ How It Works
-Open the web app at http://127.0.0.1:8000/
+---
 
-Upload a PDF or DOCX resume.
+## 🛠️ How It Works
 
-The app extracts text and displays it on the screen.
+1. Open the web app at **http://127.0.0.1:8000/**
+2. Upload a **PDF** or **DOCX** resume.
+3. The app extracts text and displays it on the screen.
 
-⚡ API Endpoints
+---
 
-Endpoint	Method	Description
+## ⚡ API Endpoints
 
-/	GET	Home page (HTML form)
+| Endpoint  | Method | Description |
+|-----------|--------|-------------|
+| `/`       | GET    | Home page (HTML form) |
+| `/upload` | POST   | Uploads and extracts text from resume |
 
-/upload	POST	Uploads and extracts text from resume
+---
 
+## 💡 Future Enhancements
+- **AI-based Job Matching** using NLP.
+- **Database Storage** for resumes.
+- **Enhanced UI** with Bootstrap/React.
 
+---
+
+## 📜 License
+This project is licensed under the **MIT License**.
 
