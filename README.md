@@ -21,13 +21,13 @@ Install dependencies
 bash
 
 pip install fastapi uvicorn python-multipart pdfplumber python-docx jinja2
+
+
 Run the FastAPI server
 
 uvicorn main:app --reload
 
-Open in Browser
-
-http://127.0.0.1:8000/
+Open in Browser  http://127.0.0.1:8000/
 
 📂 Project Structure
 
@@ -38,11 +38,17 @@ resume-analyzer/
 
 🛠️ How It Works
 Open the web app at http://127.0.0.1:8000/
+
 Upload a PDF or DOCX resume.
+
 The app extracts text and displays it on the screen.
+
 ⚡ API Endpoints
+
 Endpoint	Method	Description
+
 /	GET	Home page (HTML form)
+
 /upload	POST	Uploads and extracts text from resume
 
 
